@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One 0.01 x 0.01 degree parcel near Hyderabad (EPSG:4326 implied by KML).
+     Geodesic (WGS 84 ellipsoid) area: about 1.177 km². Its planar area in
+     degrees is 0.0001, which must never be reported. -->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>polygon_4326</name>
+    <Placemark id="parcel-1">
+      <name>Parcel 1</name>
+      <ExtendedData>
+        <Data name="owner"><value>Survey Office</value></Data>
+        <Data name="survey_no"><value>331</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>78.48,17.38,0 78.49,17.38,0 78.49,17.39,0 78.48,17.39,0 78.48,17.38,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

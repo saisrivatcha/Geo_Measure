@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Two survey control points: points need no measurement. -->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>point_4326</name>
+    <Placemark id="cp-1"><name>Control point 1</name><Point><coordinates>78.4867,17.3850,512</coordinates></Point></Placemark>
+    <Placemark id="cp-2"><name>Control point 2</name><Point><coordinates>78.4900,17.3900,509</coordinates></Point></Placemark>
+  </Document>
+</kml>

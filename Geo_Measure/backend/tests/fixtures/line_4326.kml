@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A three-vertex road centreline south of Hyderabad (about 17.2 km). -->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>line_4326</name>
+    <Placemark id="road-1">
+      <name>Access road</name>
+      <LineString>
+        <coordinates>78.40,17.30,0 78.45,17.36,0 78.52,17.40,0</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

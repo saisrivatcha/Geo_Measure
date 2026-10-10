@@ -1,0 +1,90 @@
+/*
+ * GeoMeasure design tokens.
+ *
+ * Neutral, cool chrome so the data and the map carry the colour. Geometry
+ * colours borrow topographic-map conventions and are used identically on the
+ * map, in breakdown bars and in geometry labels:
+ *   polygon = water/area blue, line = contour brown, point = vegetation green.
+ *
+ * Breakpoints (CSS variables cannot be used in media queries; mirrored in
+ * src/styles/breakpoints.ts): mobile < 768px, tablet 768-1199px, desktop >= 1200px.
+ */
+:root {
+  /* Neutrals */
+  --color-canvas: #f3f5f7;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #eef1f4;
+  --color-surface-hover: #f6f8fa;
+  --color-border: #d9dee4;
+  --color-border-strong: #b9c1cb;
+  --color-ink: #17212b;
+  --color-ink-muted: #505b68;
+  --color-ink-subtle: #6b7683;
+  --color-ink-inverse: #ffffff;
+
+  /* Interaction */
+  --color-primary: #22568a;
+  --color-primary-hover: #1b4772;
+  --color-primary-soft: #e6eef6;
+  --color-focus: #2f6fb0;
+
+  /* Geometry (topographic conventions) */
+  --geom-polygon: #3b76a8;
+  --geom-polygon-fill: rgba(59, 118, 168, 0.18);
+  --geom-line: #a0612a;
+  --geom-point: #3c7a4e;
+  --geom-other: #7a8592;
+
+  /* Status */
+  --status-success: #1f6f47;
+  --status-success-bg: #e4f1e9;
+  --status-progress: #7a5d0e;
+  --status-progress-bg: #f6efd9;
+  --status-danger: #ad2418;
+  --status-danger-bg: #fbe9e7;
+  --status-neutral: #505b68;
+  --status-neutral-bg: #eef1f4;
+
+  /* Typography */
+  --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-xs: 0.75rem; /* 12 */
+  --text-sm: 0.8125rem; /* 13 */
+  --text-md: 0.875rem; /* 14: tables, controls */
+  --text-base: 0.9375rem; /* 15: body */
+  --text-lg: 1.125rem; /* 18: section titles */
+  --text-xl: 1.375rem; /* 22: page titles */
+  --text-2xl: 1.625rem; /* 26: key figures */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Spacing (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 3rem;
+
+  /* Radius: small for inline marks, medium for controls, large for panels */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Elevation: only overlays float */
+  --shadow-raised: 0 1px 2px rgba(23, 33, 43, 0.08);
+  --shadow-overlay: 0 12px 32px rgba(23, 33, 43, 0.16), 0 2px 6px rgba(23, 33, 43, 0.08);
+
+  /* Layout */
+  --sidebar-width: 232px;
+  --sidebar-width-compact: 64px;
+  --header-height: 64px;
+  --content-max-width: 1320px;
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One placemark per case the measurement engine must handle, in this order:
+     0 Polygon, 1 MultiPolygon, 2 LineString, 3 MultiLineString, 4 Point,
+     5 GeometryCollection (mixed MultiGeometry), 6 empty LineString,
+     7 no geometry, 8 self-intersecting (bow-tie) Polygon. -->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>mixed_features</name>
+    <Folder>
+      <name>Cases</name>
+      <Placemark id="polygon">
+        <name>Polygon</name>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>78.48,17.38 78.49,17.38 78.49,17.39 78.48,17.39 78.48,17.38</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark id="multipolygon">
+        <name>MultiPolygon</name>
+        <MultiGeometry>
+          <Polygon><outerBoundaryIs><LinearRing><coordinates>78.50,17.38 78.505,17.38 78.505,17.385 78.50,17.385 78.50,17.38</coordinates></LinearRing></outerBoundaryIs></Polygon>
+          <Polygon><outerBoundaryIs><LinearRing><coordinates>78.51,17.38 78.515,17.38 78.515,17.385 78.51,17.385 78.51,17.38</coordinates></LinearRing></outerBoundaryIs></Polygon>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark id="line">
+        <name>LineString</name>
+        <LineString><coordinates>78.40,17.30 78.45,17.36 78.52,17.40</coordinates></LineString>
+      </Placemark>
+      <Placemark id="multiline">
+        <name>MultiLineString</name>
+        <MultiGeometry>
+          <LineString><coordinates>78.40,17.40 78.42,17.40</coordinates></LineString>
+          <LineString><coordinates>78.40,17.41 78.42,17.41</coordinates></LineString>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark id="point">
+        <name>Point</name>
+        <Point><coordinates>78.4867,17.3850</coordinates></Point>
+      </Placemark>
+      <Placemark id="collection">
+        <name>GeometryCollection</name>
+        <MultiGeometry>
+          <Point><coordinates>78.48,17.38</coordinates></Point>
+          <LineString><coordinates>78.48,17.38 78.49,17.39</coordinates></LineString>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark id="empty">
+        <name>Empty geometry</name>
+        <LineString><coordinates></coordinates></LineString>
+      </Placemark>
+      <Placemark id="null">
+        <name>No geometry</name>
+      </Placemark>
+      <Placemark id="bowtie">
+        <name>Self-intersecting polygon</name>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>78.60,17.38 78.61,17.39 78.61,17.38 78.60,17.39 78.60,17.38</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

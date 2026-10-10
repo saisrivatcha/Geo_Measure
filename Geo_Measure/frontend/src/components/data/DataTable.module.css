@@ -1,0 +1,81 @@
+.wrapper {
+  position: relative;
+  overflow: auto;
+  max-height: var(--table-max-height, none);
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--text-md);
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface-sunken);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: var(--space-5);
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: var(--space-5);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.end {
+  text-align: right !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover td {
+  background: var(--color-surface-hover);
+}
+
+.clickable:focus-visible {
+  outline: none;
+}
+
+.clickable:focus-visible td {
+  background: var(--color-primary-soft);
+  box-shadow: inset 0 2px 0 var(--color-focus), inset 0 -2px 0 var(--color-focus);
+}
+
+.selected td {
+  background: var(--color-primary-soft);
+}
+
+.fetching {
+  opacity: 0.6;
+  transition: opacity var(--duration-base);
+}

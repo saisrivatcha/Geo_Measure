@@ -1,0 +1,127 @@
+/*
+ * Styled after the projection note in a topographic map's margin: a neatline
+ * frame with corner ticks. The one deliberately decorative element in the UI.
+ */
+.panel {
+  position: relative;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.neatline {
+  position: relative;
+  padding: var(--space-4);
+  border: 1px solid var(--color-ink);
+}
+
+.neatline::before,
+.neatline::after,
+.ticks::before,
+.ticks::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--color-ink);
+  border-style: solid;
+}
+
+.neatline::before {
+  top: -5px;
+  left: -5px;
+  border-width: 0 1px 1px 0;
+}
+.neatline::after {
+  top: -5px;
+  right: -5px;
+  border-width: 0 0 1px 1px;
+}
+.ticks::before {
+  bottom: -5px;
+  left: -5px;
+  border-width: 1px 1px 0 0;
+}
+.ticks::after {
+  bottom: -5px;
+  right: -5px;
+  border-width: 1px 0 0 1px;
+}
+
+.title {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-4);
+}
+
+.systems {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.system {
+  min-width: 0;
+}
+
+.role {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.code {
+  margin: 2px 0 0;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  overflow-wrap: anywhere;
+}
+
+.arrow {
+  align-self: center;
+  color: var(--color-ink-subtle);
+}
+
+.missing {
+  color: var(--color-ink-subtle);
+  font-weight: var(--weight-medium);
+}
+
+.note {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.note svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.assumed {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--status-progress);
+}
+
+@media (max-width: 479px) {
+  .systems {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .arrow {
+    transform: rotate(90deg);
+    justify-self: start;
+  }
+}

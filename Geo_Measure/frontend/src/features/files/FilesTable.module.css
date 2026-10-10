@@ -1,0 +1,19 @@
+.fileCell {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.fileName {
+  font-weight: var(--weight-medium);
+  overflow-wrap: break-word;
+}
+
+.muted {
+  color: var(--color-ink-subtle);
+}
+
+.actions {
+  display: inline-flex;
+  gap: var(--space-1);
+}

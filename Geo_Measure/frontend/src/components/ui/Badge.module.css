@@ -1,0 +1,50 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.neutral {
+  background: var(--status-neutral-bg);
+  color: var(--status-neutral);
+}
+.success {
+  background: var(--status-success-bg);
+  color: var(--status-success);
+}
+.progress {
+  background: var(--status-progress-bg);
+  color: var(--status-progress);
+}
+.danger {
+  background: var(--status-danger-bg);
+  color: var(--status-danger);
+}
+.info {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

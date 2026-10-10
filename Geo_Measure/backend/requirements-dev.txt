@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest==9.1.1
+pytest-asyncio==1.4.0
+httpx==0.28.1
+# Starlette 1.x TestClient is built on httpx2; plain httpx is used for async ASGI tests.
+httpx2==2.13.0
+ruff==0.16.10
